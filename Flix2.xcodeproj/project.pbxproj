@@ -15,6 +15,7 @@
 		E8E9D80B20E5589300913EDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D80A20E5589300913EDA /* main.m */; };
 		E8E9D81620E55D0100913EDA /* MovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D81520E55D0100913EDA /* MovieCollectionViewController.m */; };
 		E8E9D81920E55D9C00913EDA /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D81820E55D9C00913EDA /* MovieCollectionViewCell.m */; };
+		E8E9D81C20E5787D00913EDA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D81B20E5787D00913EDA /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		E8E9D81520E55D0100913EDA /* MovieCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewController.m; sourceTree = "<group>"; };
 		E8E9D81720E55D9C00913EDA /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
 		E8E9D81820E55D9C00913EDA /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
+		E8E9D81A20E5787D00913EDA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E8E9D81B20E5787D00913EDA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 			children = (
 				E8E9D81420E55D0100913EDA /* MovieCollectionViewController.h */,
 				E8E9D81520E55D0100913EDA /* MovieCollectionViewController.m */,
+				E8E9D81A20E5787D00913EDA /* DetailViewController.h */,
+				E8E9D81B20E5787D00913EDA /* DetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E9D81C20E5787D00913EDA /* DetailViewController.m in Sources */,
 				E8E9D80B20E5589300913EDA /* main.m in Sources */,
 				E8E9D7FD20E5589200913EDA /* AppDelegate.m in Sources */,
 				E8E9D81620E55D0100913EDA /* MovieCollectionViewController.m in Sources */,

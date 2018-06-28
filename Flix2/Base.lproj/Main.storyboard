@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie Collection View Controller-->
+        <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MovieCollectionViewController" sceneMemberID="viewController">
@@ -44,6 +44,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="XJa-Fd-fmY" id="OSX-hi-z1g"/>
+                                            <segue destination="wyt-wY-Woc" kind="show" id="1ds-BA-idy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -52,7 +53,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4gg-qF-xh5"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="4gg-qF-xh5"/>
                     <connections>
                         <outlet property="collectionView" destination="vcq-US-aCd" id="9H1-kE-cDs"/>
                     </connections>
@@ -60,6 +61,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="890.10494752623697"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="dt3-bi-BN7">
+            <objects>
+                <viewController id="wyt-wY-Woc" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Sy-Ga-Vmy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMq-80-RB4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-nd-E5M">
+                                        <rect key="frame" x="0.0" y="-64" width="374" height="374"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlp-6z-cNa">
+                                        <rect key="frame" x="8" y="196" width="150" height="225"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9b-dS-QIS">
+                                        <rect key="frame" x="166" y="318" width="201" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1-1-1980" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBX-eq-GkE">
+                                        <rect key="frame" x="166" y="365" width="201" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-Hm-oBi">
+                                        <rect key="frame" x="8" y="429" width="359" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra elementum ex sed pretium. Duis elementum gravida magna, quis sodales felis feugiat sed. Donec tempor ligula vitae lacus blandit, et dictum mi viverra. Curabitur finibus elit at leo rutrum, vel rutrum mi rhoncus. Etiam ultrices pellentesque nibh. Vivamus porta viverra dui, quis vehicula sem lobortis sed. Duis id eros elit. Sed hendrerit blandit nisl. Donec pulvinar urna facilisis nunc finibus ultrices. Donec tincidunt in nulla et hendrerit. Vestibulum at ligula purus. Nullam interdum, dui sed posuere aliquam, sapien tortor suscipit risus, pellentesque mollis nunc sapien id lectus. Pellentesque suscipit metus ex, vel tincidunt dui luctus ac. Fusce gravida porttitor ullamcorper. Pellentesque mollis commodo lacinia. Nunc nec commodo nisi.
+
+Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis a interdum. Donec vitae leo consectetur, maximus metus eget, rutrum risus. Aliquam erat volutpat. Mauris dapibus mattis tortor auctor congue. Nunc.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aye-rA-X1X">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2xY-42-lc1"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="aye-rA-X1X" id="HF2-OC-Nwl"/>
+                        <outlet property="backdropImageView" destination="4r9-nd-E5M" id="zKn-M1-dgB"/>
+                        <outlet property="overviewLabel" destination="bWb-Hm-oBi" id="67l-sL-phH"/>
+                        <outlet property="posterImageView" destination="Wlp-6z-cNa" id="Qkf-H6-jOA"/>
+                        <outlet property="releaseDateLabel" destination="OBX-eq-GkE" id="Mfl-Fj-k3G"/>
+                        <outlet property="titleLabel" destination="U9b-dS-QIS" id="Fj7-rS-nmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMX-hv-RHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="1663.7181409295354"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Itk-Xg-D8R">
@@ -78,11 +147,11 @@
             </objects>
             <point key="canvasLocation" x="137" y="-680"/>
         </scene>
-        <!--Item-->
+        <!--Now Playing-->
         <scene sceneID="ZTk-3i-dVK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xnM-hl-MPA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tDk-bT-fwh"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" id="tDk-bT-fwh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rf7-n5-yLD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
