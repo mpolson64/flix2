@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD82EE6ED82494D5AEE1724D /* libPods-Flix2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3028F70774657944CAB799AD /* libPods-Flix2.a */; };
 		E8E9D7FD20E5589200913EDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D7FC20E5589200913EDA /* AppDelegate.m */; };
 		E8E9D80020E5589200913EDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D7FF20E5589200913EDA /* ViewController.m */; };
 		E8E9D80320E5589200913EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E9D80120E5589200913EDA /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E70427D86F350BB2AAEB5CA /* Pods-Flix2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flix2/Pods-Flix2.release.xcconfig"; sourceTree = "<group>"; };
+		3028F70774657944CAB799AD /* libPods-Flix2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Flix2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0720B76123FEF645C5B1740 /* Pods-Flix2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flix2/Pods-Flix2.debug.xcconfig"; sourceTree = "<group>"; };
 		E8E9D7F820E5589200913EDA /* Flix2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E9D7FB20E5589200913EDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E9D7FC20E5589200913EDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD82EE6ED82494D5AEE1724D /* libPods-Flix2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5033903F0C7E03DA66965B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0720B76123FEF645C5B1740 /* Pods-Flix2.debug.xcconfig */,
+				1E70427D86F350BB2AAEB5CA /* Pods-Flix2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E8E9D7EF20E5589200913EDA = {
 			isa = PBXGroup;
 			children = (
 				E8E9D7FA20E5589200913EDA /* Flix2 */,
 				E8E9D7F920E5589200913EDA /* Products */,
+				0F5033903F0C7E03DA66965B /* Pods */,
+				F99BA478E3AED0E4B2991C06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = Flix2;
 			sourceTree = "<group>";
 		};
+		F99BA478E3AED0E4B2991C06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3028F70774657944CAB799AD /* libPods-Flix2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8E9D80E20E5589300913EDA /* Build configuration list for PBXNativeTarget "Flix2" */;
 			buildPhases = (
+				17B92E01F756AA673024CF17 /* [CP] Check Pods Manifest.lock */,
 				E8E9D7F420E5589200913EDA /* Sources */,
 				E8E9D7F520E5589200913EDA /* Frameworks */,
 				E8E9D7F620E5589200913EDA /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17B92E01F756AA673024CF17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flix2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8E9D7F420E5589200913EDA /* Sources */ = {
@@ -281,6 +327,7 @@
 		};
 		E8E9D80F20E5589300913EDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0720B76123FEF645C5B1740 /* Pods-Flix2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +345,7 @@
 		};
 		E8E9D81020E5589300913EDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E70427D86F350BB2AAEB5CA /* Pods-Flix2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
