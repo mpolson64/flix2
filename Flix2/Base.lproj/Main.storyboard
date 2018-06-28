@@ -159,7 +159,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-Hm-oBi">
-                                        <rect key="frame" x="8" y="429" width="359" height="117"/>
+                                        <rect key="frame" x="8" y="429" width="359" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra elementum ex sed pretium. Duis elementum gravida magna, quis sodales felis feugiat sed. Donec tempor ligula vitae lacus blandit, et dictum mi viverra. Curabitur finibus elit at leo rutrum, vel rutrum mi rhoncus. Etiam ultrices pellentesque nibh. Vivamus porta viverra dui, quis vehicula sem lobortis sed. Duis id eros elit. Sed hendrerit blandit nisl. Donec pulvinar urna facilisis nunc finibus ultrices. Donec tincidunt in nulla et hendrerit. Vestibulum at ligula purus. Nullam interdum, dui sed posuere aliquam, sapien tortor suscipit risus, pellentesque mollis nunc sapien id lectus. Pellentesque suscipit metus ex, vel tincidunt dui luctus ac. Fusce gravida porttitor ullamcorper. Pellentesque mollis commodo lacinia. Nunc nec commodo nisi.
 
@@ -171,26 +171,22 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </scrollView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aye-rA-X1X">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2xY-42-lc1"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="aye-rA-X1X" id="HF2-OC-Nwl"/>
                         <outlet property="backdropImageView" destination="4r9-nd-E5M" id="zKn-M1-dgB"/>
                         <outlet property="overviewLabel" destination="bWb-Hm-oBi" id="67l-sL-phH"/>
                         <outlet property="posterImageView" destination="Wlp-6z-cNa" id="Qkf-H6-jOA"/>
                         <outlet property="releaseDateLabel" destination="OBX-eq-GkE" id="Mfl-Fj-k3G"/>
+                        <outlet property="scrollView" destination="xMq-80-RB4" id="r9H-Pg-OFq"/>
                         <outlet property="titleLabel" destination="U9b-dS-QIS" id="Fj7-rS-nmK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMX-hv-RHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="1677"/>
+            <point key="canvasLocation" x="589.60000000000002" y="1676.311844077961"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Itk-Xg-D8R">

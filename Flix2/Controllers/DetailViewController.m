@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *overviewLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *backdropImageView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -25,17 +25,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.activityIndicator startAnimating];
     
     [self.posterImageView setImageWithURL:[NSURL URLWithString:[@"https://image.tmdb.org/t/p/w500" stringByAppendingString:self.movie[@"poster_path"]]]];
     [self.backdropImageView setImageWithURL:[NSURL URLWithString:[@"https://image.tmdb.org/t/p/w500" stringByAppendingString:self.movie[@"backdrop_path"]]]];
     
     self.titleLabel.text = self.movie[@"title"];
     self.releaseDateLabel.text = self.movie[@"release_date"];
+    
     self.overviewLabel.text = self.movie[@"overview"];
     [self.overviewLabel sizeToFit];
-    
-    [self.activityIndicator stopAnimating];
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.overviewLabel.frame.origin.y + self.overviewLabel.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning {
