@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		DD82EE6ED82494D5AEE1724D /* libPods-Flix2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3028F70774657944CAB799AD /* libPods-Flix2.a */; };
 		E8E9D7FD20E5589200913EDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D7FC20E5589200913EDA /* AppDelegate.m */; };
-		E8E9D80020E5589200913EDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D7FF20E5589200913EDA /* ViewController.m */; };
 		E8E9D80320E5589200913EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E9D80120E5589200913EDA /* Main.storyboard */; };
 		E8E9D80520E5589300913EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E9D80420E5589300913EDA /* Assets.xcassets */; };
 		E8E9D80820E5589300913EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E9D80620E5589300913EDA /* LaunchScreen.storyboard */; };
 		E8E9D80B20E5589300913EDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D80A20E5589300913EDA /* main.m */; };
+		E8E9D81620E55D0100913EDA /* MovieCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D81520E55D0100913EDA /* MovieCollectionViewController.m */; };
+		E8E9D81920E55D9C00913EDA /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E9D81820E55D9C00913EDA /* MovieCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +24,15 @@
 		E8E9D7F820E5589200913EDA /* Flix2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E9D7FB20E5589200913EDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8E9D7FC20E5589200913EDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E8E9D7FE20E5589200913EDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8E9D7FF20E5589200913EDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E8E9D80220E5589200913EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8E9D80420E5589300913EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8E9D80720E5589300913EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8E9D80920E5589300913EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E9D80A20E5589300913EDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E8E9D81420E55D0100913EDA /* MovieCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewController.h; sourceTree = "<group>"; };
+		E8E9D81520E55D0100913EDA /* MovieCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewController.m; sourceTree = "<group>"; };
+		E8E9D81720E55D9C00913EDA /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		E8E9D81820E55D9C00913EDA /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +77,11 @@
 		E8E9D7FA20E5589200913EDA /* Flix2 */ = {
 			isa = PBXGroup;
 			children = (
+				E8E9D81320E55CB000913EDA /* Controllers */,
+				E8E9D81220E55CA600913EDA /* Views */,
+				E8E9D81120E55C6A00913EDA /* Models */,
 				E8E9D7FB20E5589200913EDA /* AppDelegate.h */,
 				E8E9D7FC20E5589200913EDA /* AppDelegate.m */,
-				E8E9D7FE20E5589200913EDA /* ViewController.h */,
-				E8E9D7FF20E5589200913EDA /* ViewController.m */,
 				E8E9D80120E5589200913EDA /* Main.storyboard */,
 				E8E9D80420E5589300913EDA /* Assets.xcassets */,
 				E8E9D80620E5589300913EDA /* LaunchScreen.storyboard */,
@@ -85,6 +89,31 @@
 				E8E9D80A20E5589300913EDA /* main.m */,
 			);
 			path = Flix2;
+			sourceTree = "<group>";
+		};
+		E8E9D81120E55C6A00913EDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8E9D81220E55CA600913EDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9D81720E55D9C00913EDA /* MovieCollectionViewCell.h */,
+				E8E9D81820E55D9C00913EDA /* MovieCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8E9D81320E55CB000913EDA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8E9D81420E55D0100913EDA /* MovieCollectionViewController.h */,
+				E8E9D81520E55D0100913EDA /* MovieCollectionViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F99BA478E3AED0E4B2991C06 /* Frameworks */ = {
@@ -187,9 +216,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E9D80020E5589200913EDA /* ViewController.m in Sources */,
 				E8E9D80B20E5589300913EDA /* main.m in Sources */,
 				E8E9D7FD20E5589200913EDA /* AppDelegate.m in Sources */,
+				E8E9D81620E55D0100913EDA /* MovieCollectionViewController.m in Sources */,
+				E8E9D81920E55D9C00913EDA /* MovieCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
