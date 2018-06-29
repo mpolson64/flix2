@@ -10,6 +10,7 @@
 
 #import "DetailViewController.h"
 #import "TrailerViewController.h"
+#import "PosterViewController.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -24,6 +25,10 @@
 @implementation DetailViewController
 - (IBAction)onBackdropTap:(id)sender {
     [self performSegueWithIdentifier:nil sender:@"toTrailer"];
+}
+- (IBAction)onPosterTap:(id)sender {
+    [self performSegueWithIdentifier:nil sender:@"toPoster"];
+
 }
 
 - (void)viewDidLoad {
@@ -52,6 +57,9 @@
     
     TrailerViewController *trailerViewController = [segue destinationViewController];
     trailerViewController.movie = self.movie;
+    
+    PosterViewController *posterViewController = [segue destinationViewController];
+    posterViewController.movie = self.movie;
 }
 
 @end

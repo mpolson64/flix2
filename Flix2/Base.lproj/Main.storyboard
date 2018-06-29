@@ -144,9 +144,13 @@
                                             <outletCollection property="gestureRecognizers" destination="Pjw-BD-nhK" appends="YES" id="RHy-QY-GOg"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlp-6z-cNa">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlp-6z-cNa">
                                         <rect key="frame" x="8" y="196" width="150" height="225"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="yMk-p5-DYl" appends="YES" id="hAf-Wa-kIk"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9b-dS-QIS">
                                         <rect key="frame" x="166" y="318" width="201" height="39"/>
@@ -189,10 +193,16 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMX-hv-RHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Pjw-BD-nhK">
+                <tapGestureRecognizer id="Pjw-BD-nhK" userLabel="Tap Gesture Recognizer Backdrop">
                     <connections>
                         <action selector="onBackdropTap:" destination="wyt-wY-Woc" id="i6t-yy-lFp"/>
                         <segue destination="H0r-VW-YVJ" kind="show" identifier="toTrailer" id="ZrS-Et-SES"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yMk-p5-DYl">
+                    <connections>
+                        <action selector="onPosterTap:" destination="wyt-wY-Woc" id="B48-zB-PsL"/>
+                        <segue destination="if6-bB-yWl" kind="show" identifier="toPoster" id="7zX-Pb-5uf"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -225,7 +235,31 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja2-7S-iWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="2505"/>
+            <point key="canvasLocation" x="137" y="2447"/>
+        </scene>
+        <!--Poster View Controller-->
+        <scene sceneID="JlZ-JI-jQN">
+            <objects>
+                <viewController id="if6-bB-yWl" customClass="PosterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HGN-H5-VEG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-0U-2uU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zed-Di-7ad"/>
+                    </view>
+                    <connections>
+                        <outlet property="posterImageView" destination="Scg-0U-2uU" id="a4D-zA-Uyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SzU-12-7NW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="2445.4272863568217"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Itk-Xg-D8R">
@@ -243,7 +277,7 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iua-GW-mdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="-680"/>
+            <point key="canvasLocation" x="590" y="-636"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="ZTk-3i-dVK">
