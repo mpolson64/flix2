@@ -63,13 +63,9 @@
 }
 
 -(NSString*)readableDate:(NSString *)inString {
-    NSLog(inString);
     NSString *year = [inString substringWithRange:NSMakeRange(0, 4)];
-    NSLog(year);
     NSString *monthNum = [inString substringWithRange:NSMakeRange(5, 2)];
-    NSLog(monthNum);
     NSString *day = [inString substringWithRange:NSMakeRange(8, 2)];
-    NSLog(day);
     
     NSString *outString = @"";
     if(monthNum == @"01") {
