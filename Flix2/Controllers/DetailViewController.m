@@ -39,7 +39,7 @@
     [self.backdropImageView setImageWithURL:[NSURL URLWithString:[@"https://image.tmdb.org/t/p/w500" stringByAppendingString:self.movie[@"backdrop_path"]]]];
     
     self.titleLabel.text = self.movie[@"title"];
-    self.releaseDateLabel.text = self.movie[@"release_date"];
+    self.releaseDateLabel.text = [self readableDate:self.movie[@"release_date"]];
     
     self.overviewLabel.text = self.movie[@"overview"];
     [self.overviewLabel sizeToFit];
@@ -60,6 +60,47 @@
     
     PosterViewController *posterViewController = [segue destinationViewController];
     posterViewController.movie = self.movie;
+}
+
+-(NSString*)readableDate:(NSString *)inString {
+    NSLog(inString);
+    NSString *year = [inString substringWithRange:NSMakeRange(0, 4)];
+    NSLog(year);
+    NSString *monthNum = [inString substringWithRange:NSMakeRange(5, 2)];
+    NSLog(monthNum);
+    NSString *day = [inString substringWithRange:NSMakeRange(8, 2)];
+    NSLog(day);
+    
+    NSString *outString = @"";
+    if(monthNum == @"01") {
+        outString = [outString stringByAppendingString:@"Jan. "];
+    } else if([monthNum isEqualToString:@"02"]) {
+        outString = [outString stringByAppendingString:@"Feb. "];
+    } else if([monthNum isEqualToString:@"03"]) {
+        outString = [outString stringByAppendingString:@"Mar. "];
+    } else if([monthNum isEqualToString:@"04"]) {
+        outString = [outString stringByAppendingString:@"Apr. "];
+    } else if([monthNum isEqualToString:@"05"]) {
+        outString = [outString stringByAppendingString:@"May "];
+    } else if([monthNum isEqualToString:@"06"]) {
+        outString = [outString stringByAppendingString:@"Jun. "];
+    } else if([monthNum isEqualToString:@"07"]) {
+        outString = [outString stringByAppendingString:@"Jul. "];
+    } else if([monthNum isEqualToString:@"08"]) {
+        outString = [outString stringByAppendingString:@"Aug. "];
+    } else if([monthNum isEqualToString:@"09"]) {
+        outString = [outString stringByAppendingString:@"Sept. "];
+    } else if([monthNum isEqualToString:@"10"]) {
+        outString = [outString stringByAppendingString:@"Oct. "];
+    } else if([monthNum isEqualToString:@"11"]) {
+        outString = [outString stringByAppendingString:@"Nov. "];
+    } else if([monthNum isEqualToString:@"12"]) {
+        outString = [outString stringByAppendingString:@"Dec. "];
+    }
+    
+    outString = [outString stringByAppendingString:day];
+    outString = [outString stringByAppendingString:[NSString stringWithFormat:@", %@", year]];
+    return outString;
 }
 
 @end

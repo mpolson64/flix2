@@ -218,7 +218,7 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="589.60000000000002" y="1676.311844077961"/>
+            <point key="canvasLocation" x="590" y="1661"/>
         </scene>
         <!--Trailer View Controller-->
         <scene sceneID="DSF-5C-hc0">
@@ -247,7 +247,7 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja2-7S-iWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="2447"/>
+            <point key="canvasLocation" x="137" y="2428"/>
         </scene>
         <!--Poster View Controller-->
         <scene sceneID="JlZ-JI-jQN">
@@ -271,7 +271,7 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzU-12-7NW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="2445.4272863568217"/>
+            <point key="canvasLocation" x="1052" y="2427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Itk-Xg-D8R">
@@ -295,7 +295,7 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
         <scene sceneID="ZTk-3i-dVK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xnM-hl-MPA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="tDk-bT-fwh"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="tDk-bT-fwh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rf7-n5-yLD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -314,7 +314,7 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
         <scene sceneID="FtP-9D-JQY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yLd-eq-Hcs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Superhero" id="ziT-RX-TOF"/>
+                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="ziT-RX-TOF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V0r-6o-xK2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -330,6 +330,10 @@ Phasellus facilisis fringilla sapien sit amet congue. Vivamus posuere eu turpis 
             <point key="canvasLocation" x="1052" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
+        <image name="superhero_tabbar_item" width="21" height="23"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6Ua-cV-ADf"/>
     </inferredMetricsTieBreakers>
