@@ -1,4 +1,4 @@
-# Project 2 - *Name of App Here*
+# Project 2 - *Flix2*
 
 **Flix2** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
