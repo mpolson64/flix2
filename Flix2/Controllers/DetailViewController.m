@@ -11,6 +11,7 @@
 #import "DetailViewController.h"
 #import "TrailerViewController.h"
 #import "PosterViewController.h"
+#import "RelatedViewController.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -60,6 +61,9 @@
     
     PosterViewController *posterViewController = [segue destinationViewController];
     posterViewController.movie = self.movie;
+    
+    RelatedViewController *relatedViewController = [segue destinationViewController];
+    relatedViewController.movie = self.movie;
 }
 
 -(NSString*)readableDate:(NSString *)inString {
@@ -68,7 +72,7 @@
     NSString *day = [inString substringWithRange:NSMakeRange(8, 2)];
     
     NSString *outString = @"";
-    if(monthNum == @"01") {
+    if([monthNum isEqualToString:@"01"]) {
         outString = [outString stringByAppendingString:@"Jan. "];
     } else if([monthNum isEqualToString:@"02"]) {
         outString = [outString stringByAppendingString:@"Feb. "];
